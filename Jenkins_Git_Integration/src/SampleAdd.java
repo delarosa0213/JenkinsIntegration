@@ -13,7 +13,9 @@ public class SampleAdd {
                 break;
             } else {
                 System.out.println("Invalid input. Please enter an integer value for x:");
-                sc.nextLine();
+                if (sc.hasNextLine()) {
+                    sc.nextLine();
+                }
             }
         }
         
