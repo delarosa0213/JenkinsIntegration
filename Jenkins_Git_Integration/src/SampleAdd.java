@@ -2,27 +2,23 @@ import java.util.Scanner;
 
 public class SampleAdd {
     public static void main(String[] args) {
-        int y = 10;
+        Scanner sc = new Scanner(System.in);
         int x = 0;
-        int ans = 0;
         
-        Scanner scanner = new Scanner(System.in);
-
+        // Prompt the user to enter a valid integer for x
         while (true) {
-            try {
-                System.out.print("Enter the value of x: ");
-                x = scanner.nextInt();
+            System.out.print("Enter the value of x: ");
+            if (sc.hasNextInt()) {
+                x = sc.nextInt();
                 break;
-            } catch (Exception e) {
+            } else {
                 System.out.println("Invalid input. Please enter an integer value for x:");
-                scanner.nextLine();
+                sc.nextLine();
             }
         }
-
-        scanner.close();
-
-        ans = x + y;
-
-        System.out.println("x + y = " + ans);
+        
+        int y = 10;
+        int sum = x + y;
+        System.out.println("Sum of x and y is: " + sum);
     }
 }
