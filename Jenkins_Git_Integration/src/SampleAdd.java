@@ -5,7 +5,7 @@ public class SampleAdd {
 	int x = 12;
 	int ans = x + y;
 	
-	System.out.println(ans);
+	System.out.println("The answer will be" + ans);
 	
 	
 	}
